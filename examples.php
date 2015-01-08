@@ -1,4 +1,6 @@
-//---------------------------------------------------------------Monday---------------------------------------------------------
+<?php
+
+//--------------------------------------------------------------Tuesday---------------------------------------------------------
 
 class Game {
 	
@@ -70,15 +72,15 @@ class Cat {
 	public $gender = “male”;
 
 	function petName() {
-		return “{$this­>firstName}” . “{$this­>lastName}”;
+		return “{$this->firstName}” . “{$this->lastName}”;
 	}
 
 }
 
 $cat1 = new Cat();
-$cat1­>firstName = “Whiskers”;
-$cat1­>lastName = “van Riet”;
-print “My cat’s name is {$cat1­>petName()}.”;
+$cat1->firstName = “Whiskers”;
+$cat1->lastName = “van Riet”;
+print “My cat’s name is {$cat1->petName()}.”;
 
 class DJ {
 
@@ -87,15 +89,15 @@ class DJ {
 	public $gender = “male”;
 
 	function nickName() {
-		return “{$this­>firstName}” . “{$this­>lastName}”;
+		return “{$this->firstName}” . “{$this->lastName}”;
 	}
 
 }
 
 $dj1 = new DJ();
-$dj1­>firstName = “Unmet”;
-$dj1­>lastName = “Ozcan”;
-print “That DJ’s name is {$dj1­>nickName()}.”;
+$dj1->firstName = “Unmet”;
+$dj1->lastName = “Ozcan”;
+print “That DJ’s name is {$dj1->nickName()}.”;
 
 class Song {
 
@@ -110,10 +112,10 @@ class Song {
 }
 
 $song1 = new Song();
-$song1­>name = “Colors”;
+$song1->name = “Colors”;
 print “That song is {$song1­>songName()}.”;
 
-//-------------------------------------------------------------Tuesday----------------------------------------------------------
+//-------------------------------------------------------------Wednesday--------------------------------------------------------
 
 class Cat {
 
@@ -122,13 +124,13 @@ class Cat {
 	public $breed;
 
 	function __construct($firstName, $lastName, $breed) {
-		$this­>firstName = $firstName;
-		$this­>lastName = $lastName;
-		$this­>breed = $breed;
+		$this->firstName = $firstName;
+		$this->lastName = $lastName;
+		$this->breed = $breed;
 	}
 
 	function petName() {
-		return “{$this­>firstName}” . “{$this­>lastName}”;
+		return “{$this->firstName}” . “{$this->lastName}”;
 	}
 }
 
@@ -139,13 +141,13 @@ class Person {
 	public $race;
 
 	function __construct($firstName, $lastName, $race) {
-		$this­>firstName = $firstName;
-		$this­>lastName = $lastName;
-		$this­>race = $race;
+		$this->firstName = $firstName;
+		$this->lastName = $lastName;
+		$this->race = $race;
 	}
 
 	function guyName() {
-		return “{$this­>firstName}” . “{$this­>lastName}”;
+		return “{$this->firstName}” . “{$this->lastName}”;
 	}
 }
 
@@ -156,21 +158,41 @@ class Girl {
 	public $favoriteMusic;
 
 	function __construct($firstName, $lastName, $favoriteMusic) {
-		$this­>firstName = $firstName;
-		$this­>lastName = $lastName;
-		$this­>favoriteMusic = $favoriteMusic;
+		$this->firstName = $firstName;
+		$this->lastName = $lastName;
+		$this->favoriteMusic = $favoriteMusic;
 	}
 
 	function girlName() {
-		return “{$this­>firstName}” . “{$this­>lastName}”;
+		return “{$this->firstName}” . “{$this­>lastName}”;
 	}
 }
 
 $cat1 = new Cat(“Whiskers”, “van Riet”, “Persian”);
-print “Cat 1: {$cat1­>petName()}\n;
+print “Cat 1: {$cat1->petName()}\n;
 
 $guy1 = new Guy(“Julian”, “van Riet”, “Caucasian”);
-print “Guy 1: {$guy1­>guyName()}\n;
+print “Guy 1: {$guy1->guyName()}\n;
 
 $girl1 = new Girl(“Linda”, “Khalaf”, “Dance”);
-print “Girl 1: {$girl1­>girlName()}\n;
+print “Girl 1: {$girl1->girlName()}\n;
+
+//----------------------------------------------------------Thursday------------------------------------------------------------
+
+// It outputs this because XYZ is a string and 8008 is placed within quotes making it a string, whereas 123 is an integer and 
+// false is a boolean
+
+if(is_double())
+echo "It's a decimal";
+else 
+echo "It's not a decimal";
+
+if(is_integer())
+echo "It's a number";
+else 
+echo "It's not a number";
+
+if(is_bool())
+echo "It's true";
+else 
+echo "It's false";
