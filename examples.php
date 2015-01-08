@@ -182,17 +182,17 @@ print “Girl 1: {$girl1->girlName()}\n;
 // It outputs this because XYZ is a string and 8008 is placed within quotes making it a string, whereas 123 is an integer and 
 // false is a boolean
 
-if(is_double())
+if(is_double(6.07))
 echo "It's a decimal";
 else 
 echo "It's not a decimal";
 
-if(is_integer())
+if(is_integer(666))
 echo "It's a number";
 else 
 echo "It's not a number";
 
-if(is_bool())
+if(is_bool(true))
 echo "It's true";
 else 
 echo "It's false";
