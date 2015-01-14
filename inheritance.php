@@ -15,10 +15,10 @@ class videoGame {
 		$this->type=$type;
 	}
 
-	function getGame() {
-		return "A " . $this->type . 
-			   "called" . $this->name;
-	}
+	// function getGame() {
+	// 	return "A " . $this->type . 
+	// 		   "called" . $this->name;
+	// }
 }
 
 class wiiGame extends videoGame {
@@ -37,8 +37,8 @@ class ps4Game extends videoGame {
 
 }
 
-$ps4game = new videoGame("The Last of Us", "Action");
-print "Video Game is a " . $ps4game­>getGame();
+// $ps4game = new ps4Game("The Last of Us", "Action");
+// print "Video Game is a " . $ps4game­>getGame();
 
 class houseMusic {
 
@@ -76,8 +76,8 @@ class bigRoom extends houseMusic {
 
 }
 
-$bigroom = new houseMusic("Tsunami", "DVBBS", "Borgeous" , "DOORN Records");
-print "Song is " . $bigroom­>getHouse();
+// $bigroom = new houseMusic("Tsunami", "DVBBS", "Borgeous" , "DOORN Records");
+// print "Song is " . $bigroom­>getHouse();
 
 class Country {
 
@@ -116,5 +116,132 @@ class dictatorship extends Country {
 
 }
 
-$republic = new Country("France", "French", "Democratic Republic");
-print "Country: " . $republic­>getCountry();
+// $republic = new Country("France", "French", "Democratic Republic");
+// print "Country: " . $republic­>getCountry();
+
+//--------------------------------------------------------------Wednesday---------------------------------------------------
+
+class Person {
+	public $firstName;
+	public $lastName;
+	public $gender;
+
+	function _construct($firstName, $lastName, $gender) {
+		$this->firstName = $firstName;
+		$this->lastName = $lastName;
+		$this->gender = $gender;
+	}
+
+	function getName() {
+		return $this->firstName . " " . $this->lastName;
+	}
+}
+
+class Baby extends Person {
+	function _construct($firstName, $lastName, $gender, $crawl) {
+		parent:_function($firstName, $lastName, $gender);
+		$this->crawl=$crawl;
+	}
+
+	function move() {
+		return $this->crawl;
+	}
+}
+
+class Adult extends Person {
+	function _construct($firstName, $lastName, $gender, $walk) {
+		parent:_function($firstName, $lastName, $gender);
+		$this->walk=$walk;
+	}
+
+	function go() {
+		return $this->walk;
+	}
+}
+
+$baby = new Baby("Seamus", "Archer", "Male", true);
+print "Person is " . $baby->getName();
+
+class sportsCar {
+	public $name;
+	public $maker;
+	public $color;
+	public $year;
+
+	function _construct($name, $maker, $color, $year) {
+		$this->name = $name;
+		$this->maker = $maker;
+		$this->color = $color;
+		$this->year = $year;
+	}
+
+	function getModel() {
+		return "a " . $this->color . " " . $this->year . " " . $this->maker . " " . $this->name;
+	}
+}
+
+class muscleCar extends sportsCar {
+	function _construct($name, $maker, $color, $year, $blaze) {
+		parent:_function($name, $maker, $color, $year);
+		$this->blaze=$blaze;
+	}
+
+	function drive() {
+		return $this->blaze;
+	}
+}
+
+class superCar extends sportsCar {
+	function _construct($name, $maker, $color, $year, $zoom) {
+		parent:_function($name, $maker, $color, $year);
+		$this->zoom=$zoom;
+	}
+
+	function race() {
+		return $this->zoom;
+	}
+}
+
+$supercar = new superCar("XX Internazionale", "Ferrari", "red", "2014", true);
+print "Sports car is " . $supercar->getModel();
+
+class Computer {
+	public $model;
+	public $year;
+	public $company;
+
+	function _construct($model, $year, $company) {
+		$this->model=$model;
+		$this->year=$year;
+		$this->company=$company;
+	}
+
+	function getComp() {
+		return " a" . $this->year . " " . $this->model . " made by " . $this->company;
+	}
+}
+
+class LapTop extends Computer {
+	function _construct($model, $year, $company, $function) {
+		parent:_function($model, $year, $company);
+		$this->function=$function;
+	}
+
+	function work() {
+		return $this->function;
+	}
+}
+
+class DeskTop extends Computer {
+	function _construct($model, $year, $company, $perform) {
+		parent:_function($model, $year, $company);
+		$this->perform=$perform;
+	}
+
+	function game() {
+		return $this->perform;
+	}
+}
+
+$laptop = new LapTop("Mac Air", "2014", "Apple", true);
+print "My computer is" . $laptop->getComp(); 
