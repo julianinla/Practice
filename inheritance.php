@@ -139,7 +139,7 @@ class Person {
 
 class Baby extends Person {
 	function _construct($firstName, $lastName, $gender, $crawl) {
-		parent:_function($firstName, $lastName, $gender);
+		parent::_function($firstName, $lastName, $gender);
 		$this->crawl=$crawl;
 	}
 
@@ -150,7 +150,7 @@ class Baby extends Person {
 
 class Adult extends Person {
 	function _construct($firstName, $lastName, $gender, $walk) {
-		parent:_function($firstName, $lastName, $gender);
+		parent::_function($firstName, $lastName, $gender);
 		$this->walk=$walk;
 	}
 
@@ -182,7 +182,7 @@ class sportsCar {
 
 class muscleCar extends sportsCar {
 	function _construct($name, $maker, $color, $year, $blaze) {
-		parent:_function($name, $maker, $color, $year);
+		parent::_function($name, $maker, $color, $year);
 		$this->blaze=$blaze;
 	}
 
@@ -193,7 +193,7 @@ class muscleCar extends sportsCar {
 
 class superCar extends sportsCar {
 	function _construct($name, $maker, $color, $year, $zoom) {
-		parent:_function($name, $maker, $color, $year);
+		parent::_function($name, $maker, $color, $year);
 		$this->zoom=$zoom;
 	}
 
@@ -223,7 +223,7 @@ class Computer {
 
 class LapTop extends Computer {
 	function _construct($model, $year, $company, $function) {
-		parent:_function($model, $year, $company);
+		parent::_function($model, $year, $company);
 		$this->function=$function;
 	}
 
@@ -234,7 +234,7 @@ class LapTop extends Computer {
 
 class DeskTop extends Computer {
 	function _construct($model, $year, $company, $perform) {
-		parent:_function($model, $year, $company);
+		parent::_function($model, $year, $company);
 		$this->perform=$perform;
 	}
 

@@ -2,18 +2,6 @@
 
 //--------------------------------------------------------------Tuesday---------------------------------------------------------
 
-class Game {
-	
-}
-
-class Car {
-	
-}
-
-class Book {
-	
-}
-
 $game1 = new Game();
 $game2 = new Game();
 
@@ -53,71 +41,77 @@ print $car1->name;
 $book1 = new Book();
 print $book1->name;
 
-public function myDog( $name, $breed) {
+function myDog( $name, $breed) {
 
 }
 
-public function myCat( $name, $breed) {
+function myCat( $name, $breed) {
 
 }
 
-public function myFriend( $firstName, $lastName) {
+function myFriend( $firstName, $lastName) {
 
 }
 
 class Cat {
 
-	public $firstName = “first name”;
-	public $lastName = “last name”;
-	public $gender = “male”;
+	public $firstName;
+	public $lastName;
+	public $gender;
 
 	function petName() {
-		return “{$this->firstName}” . “{$this->lastName}”;
+		return $this->firstName . $this->lastName;
 	}
 
 }
 
 $cat1 = new Cat();
-$cat1->firstName = “Whiskers”;
-$cat1->lastName = “van Riet”;
-print “My cat’s name is {$cat1->petName()}.”;
+$cat1->firstName = "Whiskers";
+$cat1->lastName = "van Riet";
+print "My cat’s name is {$cat1->petName()}.";
 
 class DJ {
 
-	public $firstName = “first name”;
-	public $lastName = “last name”;
-	public $gender = “male”;
+	public $firstName = "first name";
+	public $lastName = "last name";
+	public $gender = "male";
 
 	function nickName() {
-		return “{$this->firstName}” . “{$this->lastName}”;
+		return $this->firstName . $this->lastName;
 	}
 
 }
 
 $dj1 = new DJ();
-$dj1->firstName = “Unmet”;
-$dj1->lastName = “Ozcan”;
-print “That DJ’s name is {$dj1->nickName()}.”;
+$dj1->firstName = "Unmet";
+$dj1->lastName = "Ozcan";
+print "That DJ’s name is {$dj1->nickName()}.";
 
 class Song {
 
-	public $name = “song name”;
-	public $genre = “music”;
+	public $name = "song name";
+	public $genre = "music";
 	public $artist = "artist";
 
+	function _construct($name, $genre, $artist) {
+		$this->name=$name;
+		$this->genre=$genre;
+		$this->artist=$artist;
+	}
+
 	function songName() {
-		return “{$this­>name}”;
+		return $this->name;
 	}
 
 }
 
 $song1 = new Song();
-$song1->name = “Colors”;
-print “That song is {$song1­>songName()}.”;
+$song1->name = "Colors";
+print "That song is {$song1->songName()}.";
 
 //-------------------------------------------------------------Wednesday--------------------------------------------------------
 
-class Cat {
+class Kitty {
 
 	public $firstName;
 	public $lastName;
@@ -130,7 +124,7 @@ class Cat {
 	}
 
 	function petName() {
-		return “{$this->firstName}” . “{$this->lastName}”;
+		return $this->firstName . $this->lastName;
 	}
 }
 
@@ -147,7 +141,7 @@ class Person {
 	}
 
 	function guyName() {
-		return “{$this->firstName}” . “{$this->lastName}”;
+		return $this->firstName . $this->lastName;
 	}
 }
 
@@ -164,18 +158,18 @@ class Girl {
 	}
 
 	function girlName() {
-		return “{$this->firstName}” . “{$this­>lastName}”;
+		return $this->firstName . $this->lastName;
 	}
 }
 
-$cat1 = new Cat(“Whiskers”, “van Riet”, “Persian”);
-print “Cat 1: {$cat1->petName()}\n;
+$cat1 = new Cat("Whiskers", "van Riet", "Persian");
+print "Cat 1: {$cat1->petName()}\n";
 
-$guy1 = new Guy(“Julian”, “van Riet”, “Caucasian”);
-print “Guy 1: {$guy1->guyName()}\n;
+$guy1 = new Person("Julian", "van Riet", "Caucasian");
+print "Guy 1: {$guy1->guyName()}\n";
 
-$girl1 = new Girl(“Linda”, “Khalaf”, “Dance”);
-print “Girl 1: {$girl1->girlName()}\n;
+$girl1 = new Girl("Linda", "Khalaf", "Dance");
+print "Girl 1: {$girl1->girlName()}\n";
 
 //----------------------------------------------------------Thursday------------------------------------------------------------
 
